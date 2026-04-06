@@ -109,8 +109,14 @@ a:hover {
   margin-bottom: 0.25rem;
   margin-left: auto;
   margin-right: auto;
-  width: 33.333%;
+  width: 50%;
   max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-card.hero-top {
+    width: 33.333%;
+  }
 }
 
 .badge-coming-up {
