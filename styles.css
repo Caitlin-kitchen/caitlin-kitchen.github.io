@@ -9,6 +9,8 @@
   --muted: #5c5854;
   --radius: 18px;
   --radius-sm: 12px;
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-script: "Dancing Script", "Cormorant Garamond", cursive;
 }
 
 *,
@@ -23,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-family: var(--font-serif);
   font-size: 1.2rem;
   line-height: 1.55;
   color: var(--ink);
@@ -63,19 +65,23 @@ a:hover {
 }
 
 .brand h1 {
-  font-family: "Cormorant", "Cormorant Garamond", serif;
+  font-family: var(--font-script);
   font-weight: 600;
-  font-size: clamp(2.1rem, 6vw, 2.75rem);
-  letter-spacing: 0.02em;
+  font-size: clamp(2.6rem, 8vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: 0;
   margin: 0 0 0.35rem;
   color: var(--sage-dark);
 }
 
 .tagline {
+  font-family: var(--font-serif);
   font-size: 1.15rem;
+  line-height: 1.45;
   color: var(--muted);
   font-style: italic;
-  margin: 0;
+  margin: 0.5rem auto 0;
+  max-width: 32rem;
 }
 
 .license {
@@ -91,39 +97,11 @@ a:hover {
   margin-bottom: 0;
 }
 
-.hero-card {
-  margin: 1.75rem auto 0;
-  border-radius: calc(var(--radius) + 6px);
-  overflow: hidden;
-  border: 2px solid rgba(124, 143, 114, 0.35);
-  box-shadow: 0 12px 40px rgba(44, 42, 40, 0.08);
-  background: var(--cream-deep);
-}
-
-.hero-card img {
-  width: 100%;
-}
-
-.hero-card.hero-top {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .hero-card.hero-top {
-    width: 33.333%;
-  }
-}
-
 .badge-coming-up {
   display: inline-block;
   font-size: 0.62rem;
   font-weight: 600;
-  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-family: var(--font-serif);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.22rem 0.5rem;
@@ -145,12 +123,13 @@ a:hover {
 }
 
 .panel h2 {
-  font-family: "Cormorant", serif;
+  font-family: var(--font-script);
   font-weight: 600;
-  font-size: 1.55rem;
+  font-size: 2rem;
+  line-height: 1.1;
   color: var(--pink-deep);
   margin: 0 0 0.65rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0;
 }
 
 .panel p {
@@ -159,6 +138,41 @@ a:hover {
 
 .panel p:last-child {
   margin-bottom: 0;
+}
+
+.price-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.85rem;
+  margin: 0.25rem 0 0;
+  padding: 0.65rem 0 0.85rem;
+  border-top: 1px dashed rgba(124, 143, 114, 0.35);
+  color: var(--sage-dark);
+  font-size: 1.1rem;
+}
+
+.price-line strong {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.price-divider {
+  color: rgba(124, 143, 114, 0.5);
+}
+
+.price-note {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+  flex-basis: 100%;
+}
+
+@media (min-width: 480px) {
+  .price-note {
+    flex-basis: auto;
+    margin-left: 0.25rem;
+  }
 }
 
 .list-cookies {
@@ -180,6 +194,89 @@ a:hover {
   color: var(--sage);
   font-size: 0.85em;
   top: 0.1em;
+}
+
+.hero {
+  margin: 1.75rem 0 0.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(124, 143, 114, 0.25);
+  box-shadow: 0 14px 36px rgba(44, 42, 40, 0.1);
+  background: var(--cream-deep);
+}
+
+.hero img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.photo-pair figure {
+  margin: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--cream-deep);
+  border: 1px solid rgba(124, 143, 114, 0.2);
+}
+
+.photo-pair img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .feature {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+  }
+}
+
+.feature-text {
+  min-width: 0;
+}
+
+.feature-text h2 {
+  margin-top: 0;
+}
+
+.feature-note {
+  font-size: 0.98rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.feature-image {
+  margin: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--cream-deep);
+  border: 1px solid rgba(124, 143, 114, 0.2);
+}
+
+.feature-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
 }
 
 .note {
