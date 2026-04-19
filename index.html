@@ -11,52 +11,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant:ital,wght@0,500;0,600;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="wrap">
-      <figure class="hero-card hero-top">
+      <figure class="hero">
         <img
-          src="assets/hero-cookie.jpg"
-          alt="A thick sourdough cookie broken in half to show cookie butter filling and white chocolate chips"
-          width="768"
-          height="1024"
+          src="assets/cookies-chocolate-chip-hero.jpg"
+          alt="A rack of golden sourdough chocolate chip cookies cooling"
+          width="1200"
+          height="750"
         />
       </figure>
 
       <header class="brand">
         <h1>Caitlin's Cottage Kitchen</h1>
-        <p class="tagline">Artisan sourdough cookies and bread</p>
+        <p class="tagline">
+          Handcrafted, New York–style sourdough discard cookies. Thick, soft,
+          and perfect for sharing…or not!
+        </p>
       </header>
 
       <section class="panel" id="cookies">
         <h2>On the rack</h2>
+        <p class="price-line">
+          <span><strong>Half-dozen</strong> $24</span>
+          <span class="price-divider" aria-hidden="true">·</span>
+          <span><strong>Dozen</strong> $42</span>
+          <span class="price-note">One flavor per half dozen</span>
+        </p>
         <ul class="list-cookies">
           <li>Sourdough chocolate chip</li>
           <li>Sourdough cookie butter</li>
-          <li>
-            <span class="badge-coming-up">Coming up</span>
-            Sourdough dark chocolate salted caramel
-          </li>
+          <li>Sourdough double chocolate salted caramel</li>
+          <li>Sourdough caramel toffee</li>
           <li>
             <span class="badge-coming-up">Coming up</span>
             Sourdough matcha with blueberry ganache
           </li>
         </ul>
+        <div class="photo-pair">
+          <figure>
+            <img
+              src="assets/cookies-rack-assortment.jpg"
+              alt="A close-up of golden sourdough cookies cooling on a wire rack"
+              width="1200"
+              height="1099"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <img
+              src="assets/cookies-double-chocolate.jpg"
+              alt="Four sourdough double chocolate cookies topped with flaky sea salt"
+              width="1200"
+              height="900"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="panel feature" id="bread">
+        <div class="feature-text">
+          <h2>Sourdough bread</h2>
+          <p class="price-line">
+            <span><strong>$6</strong> per loaf</span>
+          </p>
+          <p>
+            Naturally leavened sandwich loaves — soft inside, golden crust, and baked to order.
+          </p>
+        </div>
+        <figure class="feature-image">
+          <img
+            src="assets/bread-loaf.jpg"
+            alt="A tall sourdough sandwich loaf cooling on a wire rack"
+            width="969"
+            height="1200"
+            loading="lazy"
+          />
+        </figure>
       </section>
 
       <section class="panel" id="order">
         <h2>How to order</h2>
         <p>
-          I’m not taking custom orders just yet, but the cookies are available
-          at
+          <strong>Now taking orders!</strong> Email to place an order — please
+          give at least 3 days' notice so I can plan the bake.
+        </p>
+        <p>
+          Prefer to grab one today? The cookies are available at
           <strong
             ><a href="https://compasshillcountry.org/plan-a-visit/"
-              >Compass Bible Church coffee shop</a></strong>! Open every day
-          8am–4pm.
+              >Compass Bible Church coffee shop</a
+            ></strong
+          >, open Monday–Saturday 8am–4pm.
         </p>
         <p class="order-email">
           <a class="cta" href="mailto:caitlins.cottage.kitchen@gmail.com"
@@ -78,7 +130,7 @@
 
       <footer>
         <p><span class="hearts">♥</span> Caitlin's Cottage Kitchen</p>
-        <p>Thanks for supporting a home baker.</p>
+        <p>Thanks for supporting a home baker!</p>
       </footer>
     </div>
   </body>
